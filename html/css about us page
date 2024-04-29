@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4
+        }
+        
+
+        .header {
+            background-color: tan;
+            padding: 10px;
+            text-align: center;
+            border-radius: 50px;
+            box-shadow: 5px 10px 12px #666;
+            font-size: larger;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .about-us {
+            margin: 50px;
+            padding: 60px;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: tan;
+        }
+
+        p{
+            font-size: 20px;
+            color: #666;
+        }
+        .p1{
+            font-weight: bold;
+            background-color: tan;
+            height: 35px;
+            align-items: center;
+            font-size: medium;
+
+        }
+        
+        
+
+        
+        .contact-us{
+            width: 24%;
+            height: auto;
+            margin-left: 600px;
+            padding: 15px;
+            border-radius: 25px;
+            box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+            background-color:#cfcdcd;
+            
+        }
+        :hover.contact-us{
+            cursor: pointer;
+            transform: scale(1.07) ;
+        }
+        nav {
+    display: flex;
+    background-color: #ffffff;
+    padding: 0.5em;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 1em;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+}
+
+.nav-image {
+    width: 150px;
+    height: auto; 
+    transition: transform 0.3s;
+}
+
+.nav-image2 {
+    width: 50px;
+    height: auto; 
+    transition: transform 0.3s;
+}
+
+.nav-image2:hover,
+.nav-image:hover {
+    transform: translateY(-5px);
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #f0eee4;
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    <body>
+    
+        Time: <span id="txt"> </span>
+        <script>
+            window.onload = function() {getTime();}
+            function getTime() 
+            {
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        //add a zero in front of the numbers<10
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById("txt").innerHTML=h+":"+m+":"+s;
+        setTimeout(function(){getTime()},1000);
+            }
+            //setinterval ("get time()",1000);//another way
+            function checkTime(i)
+            {
+                if (i<10) {i="0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+    <div class="header">
+        <h1>About Us</h1>
+    </div>
+    <nav>
+        <ul>
+            <li>
+               
+            <img src="logo.png" alt="Nav Image" class="nav-image"> 
+    
+                   
+                </li>
+            <li><a href="#">Bracelets</a></li>
+            <li><a href="#">Chains</a></li>
+            <li><a href="#">About Us</a></li>
+            <li>
+                    <img src="cart.png" alt="Nav Image" class="nav-image2">
+                </li> 
+        </ul>
+    </nav>
+
+    <div class="about-us">
+        <h2><u>Welcome to Our Website</u></h2>
+        <div class="p">
+        <p>
+            We are a group of like-minded individuals who love technology, design, and creativity. 
+            Our mission is to provide our visitors with useful, up-to-date information on a variety of jewellery probvided by us. 
+            What sets us apart is our commitment to quality and the personalized touch we infuse into each
+            creation. Every gemstone is carefully selected for its brilliance and uniqueness, ensuring that
+            every piece is a true work of art.
+        </p>
+        <h2><u>Contact Us</u></h2>
+        <p>
+            Our team is skilled and knowledgeable, and we pride ourselves on staying updated with the latest advancements in our respective fields. 
+            Our user-friendly website also features a variety of engaging and informative content.<br><br>
+        </p>
+        <div class="p1">
+        <p1><marquee>
+            Feel free to ask us about any queries.</marquee>
+        </p1></div><br>
+         
+        <div class="contact-us">
+        
+                <form action="submit.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+        
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+        
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        
+                    <input type="submit" value="Submit">
+                </form> 
+                
+                <footer>
+                    <div class="contact-section">
+                        <h3>Contact Us</h3>
+                        <p>Email: Sparkora@yourjewelrystore.com</p>
+                        <p>Phone: +91 9836284281</p>
+                    </div>
+            
+                    <div class="social-media-section">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Twitter/X</a></li>
+                            <li><a href="https://www.instagram.com/daqshveer/" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div>
+                </footer>   
+        </body>
+</html>
